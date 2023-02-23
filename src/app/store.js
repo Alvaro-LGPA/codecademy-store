@@ -15,4 +15,6 @@ const reducers = {
     inventory: inventoryReducer
 }
 
-export const store = configureStore(combineReducers(reducers));
+// export const store = configureStore(combineReducers(reducers));
+// Apparently, configureStore manages combineReducers by its own. So no need to use combineReducers with configureStore
+export const store = configureStore({reducer: reducers});
