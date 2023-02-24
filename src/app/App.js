@@ -12,19 +12,19 @@ export const App = (props) => {
   return (
     <div>
       <CurrencyFilter
-        currencyFilter={state.currencyFilter}
+        currencyFilter={state.currency}
         dispatch={dispatch}
       />
 
       <Inventory
         inventory={state.inventory}
-        currencyFilter={state.currencyFilter}
+        currencyFilter={state.currency}
         dispatch={dispatch}
       />
 
       <Cart
       cart={state.cart}
-      currencyFilter={state.currencyFilter}
+      currencyFilter={state.currency}
       dispatch={dispatch}
       />
 
