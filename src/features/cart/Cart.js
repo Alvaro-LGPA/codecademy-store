@@ -28,7 +28,7 @@ export const Cart = (props) => {
 
   const cartElements = Object.keys(cart).map(element => createCartItem(element));
   const total = calculateTotal(cart, currencyFilter);
-  console.log(cartElements)
+  
 
 
 
