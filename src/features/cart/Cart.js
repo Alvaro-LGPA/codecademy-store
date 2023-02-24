@@ -5,6 +5,8 @@ import {
 } from '../../utilities/utilities.js';
 
 // Import the changeItemQuantity() action creator.
+import {changeItemQuantity } from './cartSlice.js'
+
 
 export const Cart = (props) => {
   const { cart, currencyFilter, dispatch } = props;
