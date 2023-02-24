@@ -5,7 +5,7 @@ import {
 } from '../../utilities/utilities.js';
 
 // Import the changeItemQuantity() action creator.
-import {changeItemQuantity } from './cartSlice.js'
+import { changeItemQuantity } from './cartSlice.js'
 
 
 export const Cart = (props) => {
@@ -21,16 +21,16 @@ export const Cart = (props) => {
     const newQuantity = Number(input);
 
     // Dispatch an action to change the quantity of the given name and quantity.
-
+    dispatch(changeItemQuantity(name, newQuantity));
   };
 
   // Use the cart and currencyFilter slices to render their data.
-  
+
   const cartElements = Object.keys(cart).map(element => createCartItem(element));
   const total = calculateTotal(cart, currencyFilter);
   console.log(cartElements)
 
-  
+
 
   return (
     <div id="cart-container">
@@ -44,8 +44,8 @@ export const Cart = (props) => {
     </div>
   );
 
- 
-  
+
+
   function createCartItem(name) {
     const item = cart[name];
 
