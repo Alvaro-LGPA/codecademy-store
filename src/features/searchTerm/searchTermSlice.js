@@ -21,7 +21,7 @@ Extra Credit:
 
 export const setSearchTerm = (term) => {
     return {
-        type: 'searchTerm/searchTerm',
+        type: 'searchTerm/setSearchTerm',
         payload: term
     }
 }
@@ -41,7 +41,7 @@ export const searchTermReducer = (searchTerm = initialSearchTerm, action) => {
             return action.payload;
         }
         case 'searchTerm/clearSearchTerm': {
-            return
+            return "";
         }
         default: {
             return searchTerm;
