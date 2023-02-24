@@ -14,6 +14,8 @@ export const addItem = (itemToAdd) => {
   }
   
   const initialCart = {};
+
+
   export const cartReducer = (cart = initialCart, action) => {
     switch (action.type) {
       case 'cart/addItem': {
