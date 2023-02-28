@@ -1,5 +1,6 @@
 import React from 'react';
 import { setSearchTerm, clearSearchTerm } from './searchTermSlice.js';
+import { loadData } from '../inventory/inventorySlice'
 
 const searchIconUrl =
   'https://static-assets.codecademy.com/Courses/Learn-Redux/Recipes-App/icons/search.svg';
@@ -16,7 +17,10 @@ export const SearchTerm = (props) => {
 
   const onClearSearchTermHandler = () => {
     dispatch(clearSearchTerm());
+    dispatch(loadData())
   };
+
+
 
   return (
     <div id="search-container">

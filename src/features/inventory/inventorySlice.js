@@ -13,6 +13,7 @@ export const inventoryReducer = (inventory = initialInventory, action) => {
     case 'inventory/loadData': {
       return action.payload;
     }
+
     default: {
       return inventory;
     }

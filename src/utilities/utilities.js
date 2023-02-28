@@ -30,3 +30,7 @@ export function calculatePrice(price, currency) {
     }
   }
   
+
+  
+
+  
